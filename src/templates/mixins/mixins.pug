@@ -46,11 +46,11 @@ mixin card-content
 
 mixin button-sort(sortBy, className, sortTo)
   if sortTo=="up"
-    button.button-sort.sort-up(class=className)
+    a.button-sort.sort-up(class=className)
       .button-sort__title= sortBy
       .button-sort__icon
   else if sortTo=="down"
-    button.button-sort.sort-down(class=className)
+    a.button-sort.sort-down(class=className)
       .button-sort__title= sortBy
       .button-sort__icon
   else

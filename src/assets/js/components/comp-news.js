@@ -16,10 +16,10 @@ function createNewsSlides(newsList) {
             .append(jQuery(
                 `<div class="comp-news__slide">
                     <div class="comp-news__summary">
-                        <img class="comp-news__reserve-image" 
-                            src="` + item.img + `" 
+                        <img class="comp-news__reserve-image"
+                            src="` + item.img + `"
                             alt="author" width="130" height="100">
-                        <div class="comp-news__image" 
+                        <div class="comp-news__image"
                             style="background-image:url('` + item.img + `');">
                         </div>
                         <div class="comp-news__info">

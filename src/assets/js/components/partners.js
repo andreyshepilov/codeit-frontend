@@ -1,6 +1,6 @@
-import { log } from "util";
-
 'use strict';
+
+import { log } from "util";
 
 function showPartners(partnersList) {
     jQuery(".partners__list").empty();

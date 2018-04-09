@@ -23,7 +23,7 @@ let signUpFormFields = [
     {
         domName: 'gender',
         messageName: 'Gender',
-        criterias: ['isExists'],
+        criterias: ['isExists', 'notEmpty'],
         requirements: {}
     },
     {
@@ -111,6 +111,20 @@ let validationCriterias = {
         } else {
             result.status = false;
             result.message = 'Email is not valid';
+            return result;
+        }
+    },
+
+    notEmpty: function(dataObject, fieldName) {
+        let result = {};
+
+        if (dataObject[fieldName].length > 0) {
+            result.status = true;
+            result.message = '';
+            return result;
+        } else {
+            result.status = false;
+            result.message = 'Field ' + fieldName + ' should be filled';
             return result;
         }
     }

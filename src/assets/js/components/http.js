@@ -6,7 +6,7 @@ var Promise = require("bluebird");
 
 module.exports = {
 
-    baseUrl: 'http://codeit.pro/codeitCandidates/serverFrontendTest/',
+    baseUrl: 'https://codeit.pro/codeitCandidates/serverFrontendTest/',
 
     get: function(path) {
         return new Promise((resolve, reject) => {

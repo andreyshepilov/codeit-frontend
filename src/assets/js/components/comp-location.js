@@ -190,11 +190,11 @@ function drawChart(selector, slices) {
     slices.forEach(function (slice, i) {
         const [startX, startY] = getCoordinatesForPercent(cumulativePercent);
         
-        cumulativePercent += slice.percent;
+        cumulativePercent += slice.percent; // previous position on circle + current slice percent value
         
         const [endX, endY] = getCoordinatesForPercent(cumulativePercent);
 
-        const largeArcFlag = slice.percent > 0.5 ? 1 : 0;
+        const largeArcFlag = slice.percent > 0.5 ? 1 : 0; // "second half of the circle" flag
 
         const pathData = [
             `M ${startX} ${startY}`,

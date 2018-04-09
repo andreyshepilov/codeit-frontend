@@ -1,3 +1,5 @@
+'use strict';
+
 function showCompaniesTotal(companiesTotal) {
     let steps = 100;
     let increment = Math.ceil(companiesTotal / steps);
