@@ -1,0 +1,75 @@
+extends ../layouts/base
+
+block content
+    .grid__container
+        .grid__col-50
+            .comp-total
+                +card-complete("Total Companies", "left", "loading")
+                    .comp-total__inner
+                        .comp-total__circle-holder
+                            .comp-total__circle
+                                .comp-total__value 0
+
+        .grid__col-50
+            .list-comp
+                +card-complete("List of Companies", "left", "loading")
+                    ul.list-comp__list
+
+        .grid__col-100
+            .partners
+                .card.card--collapsed.loading
+                    +card-header("Company Partners", "left")
+                        .card__controls-label Sort by:
+                        .card__control
+                            +button-sort("Name", "partners__sort-name", "up")
+                        .card__control
+                            +button-sort("Percentage", "partners__sort-percents", "up")
+                        .card__control
+                            .button-close.partners__close
+
+                    +card-content
+                        .partners__inner
+                            ul.partners__list
+                                //- li.partners__item
+                                //-     span.partners__item-title Item title 1 
+                                //-     span.partners__item-value 10%
+
+        .grid__col-50
+            .comp-location
+                .card.loading
+                    +card-header("Companies by Location", "left")
+                        .card__control
+                            button.button-back
+                            
+                    +card-content
+                        .comp-location__inner
+                            .comp-location__chart-holder
+                                <svg class="comp-location__chart" viewBox="-1 -1 2 2" style="transform: rotate(-90deg)"></svg>
+                                ul.comp-location__legend-holder
+                                    //- .comp-location__legend-item
+                                    //-     .comp-location__legend-color
+                                    //-     .comp-location__legend-description
+                                    //-         .comp-location__legend-name
+                                    //-         .comp-location__legend-value
+                            ul.comp-location__list
+                                //- li.comp-location__item item
+
+        .grid__col-50
+            .comp-news
+                +card-complete("News", "left", "loading")
+                    .comp-news__inner
+                        .comp-news__slider
+                            //- .comp-news__slide
+                            //-     .comp-news__summary
+                            //-         img.comp-news__image(src="./assets/img/placeholder.jpg", alt="placeholder", width="130", height="100")
+                            //-         .comp-news__info
+                            //-             div.comp-news__info-row
+                            //-                 b.comp-news__info-title Author: 
+                            //-                 span Admin
+                            //-             div.comp-news__info-row
+                            //-                 b.comp-news__info-title Public: 
+                            //-                 span Date
+                            //-     .comp-news__content
+                            //-         h6.comp-news__title Title
+                            //-             a(href="#")
+                            //-         .comp-news__text Text Text Text Text Text Text Text Text

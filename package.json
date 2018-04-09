@@ -1,0 +1,55 @@
+{
+  "name": "draft",
+  "version": "1.0.0",
+  "description": "",
+  "main": "gulpfile.js",
+  "scripts": {
+    "dev": "gulp",
+    "build": "gulp build --production",
+    "reset": "rimraf dist && rimraf temp && rimraf node_modules"
+  },
+  "author": "",
+  "license": "UNLICENSED",
+  "private": true,
+  "engines": {
+    "node": ">= 8.9.1",
+    "npm": ">= 5.5.1"
+  },
+  "dependencies": {
+    "bluebird": "^3.5.1",
+    "include-media": "^1.4.9",
+    "jquery": "^3.3.1",
+    "slick-carousel": "^1.8.1"
+  },
+  "devDependencies": {
+    "babel-core": "^6.26.0",
+    "babel-loader": "^7.1.2",
+    "babel-preset-env": "^1.6.1",
+    "browser-sync": "^2.16.0",
+    "del": "^3.0.0",
+    "gulp": "^3.9.1",
+    "gulp-autoprefixer": "^4.0.0",
+    "gulp-csso": "^3.0.0",
+    "gulp-imagemin": "^4.0.0",
+    "gulp-notify": "^3.0.0",
+    "gulp-plumber": "^1.1.0",
+    "gulp-pug": "^3.0.4",
+    "gulp-sass": "^3.1.0",
+    "gulp-shell": "^0.6.3",
+    "gulp-size": "^2.1.0",
+    "gulp-sourcemaps": "^2.4.0",
+    "gulp-util": "^3.0.7",
+    "gulp-wait": "^0.0.2",
+    "gulp-watch": "^4.3.10",
+    "minimist": "^1.2.0",
+    "plumber": "^0.4.8",
+    "require-dir": "^0.3.0",
+    "rimraf": "^2.6.2",
+    "run-sequence": "^2.2.0",
+    "uglifyjs-webpack-plugin": "^1.0.1",
+    "vinyl-named": "^1.1.0",
+    "webpack": "^3.8.1",
+    "webpack-merge": "^4.1.1",
+    "webpack-stream": "^4.0.0"
+  }
+}

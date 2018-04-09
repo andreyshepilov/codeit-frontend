@@ -1,0 +1,30 @@
+extends ../layouts/base
+
+block content
+  .sign-up
+    +card-complete("Sign up", "center", "")
+      .sign-up__form-wrapper
+        form.custom-form
+          .custom-form__row.icon-user
+            label.custom-form__label(for="name") Name
+            input.custom-form__input(id="name", type="text", name="name", required)
+          .custom-form__row.icon-user
+            label.custom-form__label.icon-user(for="secondname") Secondname 
+            input.custom-form__input(id="secondname", type="text", name="secondname", required)
+          .custom-form__row.icon-envelop
+            label.custom-form__label(for="email") Email
+            input.custom-form__input(id="email", type="email", name="email", required)
+          .custom-form__row.custom-form__row--nolabel
+            label.custom-form__label(for="gender") Gender
+            select.custom-form__select(id="gender", name="gender", required)
+              option.custom-form__option(value="male") Male
+              option.custom-form__option(value="female") Female
+          .custom-form__row.icon-key
+            label.custom-form__label(for="password") Password
+            input.custom-form__input(id="password", type="password", name="pass", required)
+          .custom-form__row
+            label.custom-form__label.custom-form__label--checkbox(for="agreement") Conditions of Agreement
+              input.custom-form__input(id="agreement", type="checkbox", name="agreement", required)
+              span.custom-form__checkmark
+          .custom-form__row
+            input.custom-form__submit(type="submit", value="Send", name="submit")

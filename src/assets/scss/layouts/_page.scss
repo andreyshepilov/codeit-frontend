@@ -1,0 +1,33 @@
+.page {
+  overflow: hidden;
+  width: 100%;
+  position: relative;
+  background-color: $clr-white;
+  min-height: 100vh;
+  padding: 30px 20px;
+
+  @include media("<sm") {
+    padding: 20px 0;
+  }
+}
+
+.page__wrapper {
+  margin-right: auto;
+  margin-left: auto;
+  max-width: $page-max-width;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.page__main {
+  width: 100%;
+}
+
+.page__error-message {
+  font-size: 16px;
+  font-weight: bold;
+  color: #000;
+  background-color: #f00;
+}

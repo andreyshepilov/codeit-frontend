@@ -1,0 +1,17 @@
+include ../config
+block config
+include ../mixins/mixins
+
+doctype
+html(lang= lang)
+  head
+    include ../partials/head
+
+  body
+
+    .page
+      .page__wrapper
+        main(class="page__main", role="main")
+          block content
+
+    script(src="./assets/js/app.js")

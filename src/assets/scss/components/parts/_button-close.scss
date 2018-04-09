@@ -1,0 +1,46 @@
+.button-close {
+    width: 23px;
+    height: 23px;
+
+    &:before {
+        content: "";
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform-origin: center;
+        display: block;
+        background-color: $clr-4;
+        width: 5px;
+        height: 100%;
+        transform: translateX(-50%) translateY(-50%) rotateZ(45deg) rotateX(0deg) rotateY(0deg);
+        transition: transform 0.6s ease-out, background-color 0.6s;
+    }
+
+    &:after {
+        content: "";
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform-origin: center;
+        display: block;
+        background-color: $clr-4;
+        width: 5px;
+        height: 100%;
+        transform: translateX(-50%) translateY(-50%) rotateZ(-45deg) rotateX(0deg) rotateY(0deg);
+        transition: transform 0.6s ease-out, background-color 0.6s;
+    }
+
+    &:hover {
+        cursor: pointer;
+
+        &:before {
+            background-color: $clr-3;
+            transform: translateX(-50%) translateY(-50%) rotateZ(225deg) rotateX(180deg) rotateY(180deg);
+        }
+
+        &:after {
+            background-color: $clr-3;
+            transform: translateX(-50%) translateY(-50%) rotateZ(135deg) rotateX(180deg) rotateY(180deg);
+        }
+    }
+}

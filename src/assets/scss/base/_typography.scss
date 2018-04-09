@@ -1,0 +1,44 @@
+a {
+    text-decoration: none;
+    color: $clr-1;
+    cursor: pointer;
+
+    &:hover {
+        text-decoration: underline;
+    }
+}
+
+h1, h2, h3 {
+    line-height: 1.1;
+    margin: 0 0 1em;
+}
+
+p {
+    line-height: 22px;
+    margin-bottom: 22px;
+    font-size: 13px;
+    color: $clr-1;
+}
+
+ul {
+    margin: 0;
+    padding: 0;
+    margin-left: 14px;
+    font-size: 13px;
+    line-height: 22px;
+    color: $clr-1;
+}
+
+ol {
+    margin: 0;
+    padding: 0;
+    margin-left: 14px;
+    font-size: 13px;
+    line-height: 22px;
+    color: $clr-1;
+}
+
+li {
+    color: $clr-1;
+    margin-bottom: 12px;
+}

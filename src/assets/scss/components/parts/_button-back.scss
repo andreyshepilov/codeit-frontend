@@ -1,0 +1,25 @@
+.button-back {
+    font-size: 14px;
+    transition: color 0.3s, opacity 0.3s;
+    border: none;
+    background-color: transparent;
+    color: $clr-4;
+    outline: none;
+    text-decoration: none;
+
+    &:hover {
+        cursor: pointer;
+        color: $clr-white;
+        text-decoration: none;
+    }
+
+    &:before {
+        content: '\ea38';
+        font-family: 'icomoon';
+    }
+
+    .comp-location & {
+        opacity: 0;
+        pointer-events: none;
+    }
+}

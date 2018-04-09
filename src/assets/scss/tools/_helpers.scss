@@ -1,0 +1,19 @@
+@mixin list-reset {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+%clearfix {
+  &:after {
+      content: '';
+      display: block;
+      clear: both;
+  }
+}
+
+@mixin ellipsis { // for single line
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+}

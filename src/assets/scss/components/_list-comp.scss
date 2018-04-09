@@ -1,0 +1,44 @@
+.list-comp {
+    font-family: $font-base;
+}
+
+.list-comp__list {
+    @include list-reset;
+
+    border: 1px solid $clr-1;
+    border-radius: 3px;
+    overflow-y: scroll;
+    height: 300px;
+    width: 100%;
+
+    li {
+        border-bottom: 1px solid $clr-1;
+        margin: 0;
+
+        &:last-of-type {
+            margin-bottom: -1px;
+        }
+    }
+}
+
+.list-comp__item {
+    margin: 0;
+    padding: 3px 10px;
+    font-family: inherit;
+    background: transparent;
+    border-color: transparent;
+    border-width: 1px;
+    width: 100%;
+    text-align: left;
+    outline: none;
+    transition: background-color 0.3s, border-color 0.3s;
+
+    &:hover {
+        cursor: pointer;
+        background-color: $clr-4;
+    }
+}
+
+.list-comp__item--selected {
+    background-color: $clr-4;
+}

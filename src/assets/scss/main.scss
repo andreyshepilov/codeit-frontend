@@ -1,0 +1,49 @@
+@charset 'UTF-8';
+
+@import "tools/function";
+@import "tools/helpers";
+@import "settings";
+
+// =======================================
+// Base
+// =======================================
+
+@import "base/fonts";
+@import "base/normalize";
+@import "base/global";
+@import "base/typography";
+
+// =======================================
+// NPM externals
+// =======================================
+
+@import "node_modules/include-media/dist/include-media";
+@import "node_modules/slick-carousel/slick/slick.scss";
+
+// =======================================
+// Layouts
+// =======================================
+
+@import "layouts/page";
+@import "layouts/grid";
+
+// =======================================
+// Components
+// =======================================
+
+@import "components/card";
+@import "components/loader-cube";
+@import "components/custom-form";
+@import "components/comp-location";
+@import "components/comp-news";
+@import "components/partners";
+@import "components/list-comp";
+@import "components/comp-total";
+
+// =======================================
+// Parts
+// =======================================
+
+@import "components/parts/button-sort";
+@import "components/parts/button-back";
+@import "components/parts/button-close";

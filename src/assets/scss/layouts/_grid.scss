@@ -1,0 +1,21 @@
+.grid__container {
+    @extend %clearfix;
+
+    margin: 0 -#{$columns-gutter/2};
+}
+
+.grid__col-50 {
+    float: left;
+    width: calc(50% - #{$columns-gutter});
+    margin: 0 $columns-gutter/2;
+
+    @include media("<md") {
+        width: calc(100% - #{$columns-gutter});
+    }
+}
+
+.grid__col-100 {
+    float: left;
+    width: calc(100% - #{$columns-gutter});
+    margin: 0 10px;
+}

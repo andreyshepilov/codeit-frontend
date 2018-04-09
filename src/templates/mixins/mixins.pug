@@ -1,0 +1,57 @@
+mixin loader-cube
+  .sk-cube-grid
+    .sk-cube.sk-cube1
+    .sk-cube.sk-cube2
+    .sk-cube.sk-cube3
+    .sk-cube.sk-cube4
+    .sk-cube.sk-cube5
+    .sk-cube.sk-cube6
+    .sk-cube.sk-cube7
+    .sk-cube.sk-cube8
+    .sk-cube.sk-cube9
+
+mixin card-complete(heading, alignment, additionalClass)
+  .card(class=additionalClass)
+    .card__header
+      if alignment=="left"
+        h2.card__heading.card__heading--left= heading
+      else
+        h2.card__heading= heading
+
+    .card__content
+      .card__spinner-overlay
+        .card__spinner-wrapper
+          +loader-cube
+      .card__error-overlay
+        .card__error-message
+      block
+
+mixin card-header(heading, alignment)
+  .card__header
+    if alignment=="left"
+      h2.card__heading.card__heading--left= heading
+    else
+      h2.card__heading= heading
+    .card__controls
+      block
+
+mixin card-content
+  .card__content
+    .card__spinner-overlay
+      .card__spinner-wrapper
+        +loader-cube
+    .card__error-overlay
+        .card__error-message
+    block
+
+mixin button-sort(sortBy, className, sortTo)
+  if sortTo=="up"
+    button.button-sort.sort-up(class=className)
+      .button-sort__title= sortBy
+      .button-sort__icon
+  else if sortTo=="down"
+    button.button-sort.sort-down(class=className)
+      .button-sort__title= sortBy
+      .button-sort__icon
+  else
+    .page__error-message Check sortTo param in button-sort mixin!

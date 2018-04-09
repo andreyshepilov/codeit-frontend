@@ -1,0 +1,43 @@
+.sk-cube-grid {
+    width: 40px;
+    height: 40px;
+
+    .sk-cube {
+        width: 33%;
+        height: 33%;
+        background-color: $clr-1;
+        float: left;
+        -webkit-animation: sk-cubeGridScaleDelay 1.3s infinite ease-in-out;
+            animation: sk-cubeGridScaleDelay 1.3s infinite ease-in-out; 
+    }
+
+    $delays: '0.2', '0.3', '0.4', '0.1', '0.2', '0.3', '0', '0.1', '0.2';
+    @for $current-item from 1 through 9 {
+        $animationDelay: nth($delays, $current-item) + s;
+        
+        #{".sk-cube"}#{$current-item} {
+            -webkit-animation-delay: #{$animationDelay};
+            animation-delay: #{$animationDelay}; 
+        }  
+    }
+}
+
+@-webkit-keyframes sk-cubeGridScaleDelay {
+    0%, 70%, 100% {
+        -webkit-transform: scale3D(1, 1, 1);
+                transform: scale3D(1, 1, 1);
+    } 35% {
+        -webkit-transform: scale3D(0, 0, 1);
+                transform: scale3D(0, 0, 1); 
+    }
+}
+
+@keyframes sk-cubeGridScaleDelay {
+    0%, 70%, 100% {
+        -webkit-transform: scale3D(1, 1, 1);
+                transform: scale3D(1, 1, 1);
+    } 35% {
+        -webkit-transform: scale3D(0, 0, 1);
+                transform: scale3D(0, 0, 1);
+    } 
+}

@@ -1,0 +1,145 @@
+.card {
+    font-family: $font-base;
+    border: 1px solid $clr-1;
+    border-radius: 3px;
+    margin: 0 0 20px;
+    overflow: hidden;
+    opacity: 1;
+    transition: opacity 0.3s;
+    height: auto;
+
+    @include media("<sm") {
+        border-radius: 0;
+        border-left: 0;
+        border-right: 0;
+    }
+}
+
+.card--collapsed {
+    height: 0;
+    opacity: 0;
+    border-color: transparent;
+    margin-bottom: -2px; // border width correction
+}
+
+.card__header {
+    background-color: $clr-1;
+    color: $clr-4;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    padding: 5px 15px;
+}
+
+.card__heading {
+    text-align: center;
+    text-transform: capitalize;
+    margin: 0 10px 0 0;
+    font-weight: normal;
+    flex: 0 1 auto;
+
+    @include media("<sm") {
+        font-size: 16px;
+    }
+}
+
+.card__heading--left {
+    text-align: left;
+}
+
+.card__controls {
+    flex: 0 1 auto;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    align-items: center;
+
+    @include media("<sm") {
+        flex: 1 1 auto;
+    }
+
+    .card.loading & {
+        display: none;
+    }
+}
+
+.card__controls-label {
+    margin: 0 10px 0 0;
+    flex: 0 1 auto;
+}
+
+.card__control {
+    margin: 0 10px 0 0;
+    flex: 0 1 auto;
+    position: relative;
+
+    @include media("<sm") {
+        margin: 0;
+    }
+
+    &:last-of-type {
+        margin-right: 0;
+        margin-left: auto;
+    }
+}
+
+.card__content {
+    @extend %clearfix;
+    
+    padding: 15px;
+    position: relative;
+    min-height: 100px;
+}
+
+.card__spinner-overlay {
+    background-color: $clr-white;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    display: none;
+    z-index: 10;
+
+    .card.loading & {
+        display: block;
+    }
+}
+
+.card__spinner-wrapper {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.card__error-overlay {
+    background-color: $clr-white;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    display: none;
+    z-index: 10;
+
+    .card.error & {
+        display: block;
+    }
+}
+
+.card__error-message {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 22px;
+    font-weight: bold;
+    color: $clr-5;
+    width: 100%;
+    padding: 20px;
+    text-align: center;
+}

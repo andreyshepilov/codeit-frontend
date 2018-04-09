@@ -1,0 +1,67 @@
+.button-sort {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    align-items: center;
+    transition: color 0.3s;
+    border: none;
+    background-color: transparent;
+    color: $clr-4;
+    outline: none;
+    text-decoration: none;
+    line-height: 20px;
+
+    &:hover {
+        cursor: pointer;
+        color: $clr-white;
+        text-decoration: none;
+    }
+}
+
+.button-sort__title {
+    flex: 0 0 auto;
+}
+
+.button-sort__icon {
+    flex: 0 0 auto;
+    position: relative;
+    height: 20px;
+    width: 15px;
+    font-size: 13px;
+
+    &:before,
+    &:after {
+        position: absolute;
+        left: 0;
+        font-family: 'icomoon';
+        color: $clr-4;
+        transition: color 0.3s;
+    }
+
+    &:before {
+        content: '\e900';
+        top: -5px;
+
+        .button-sort.sort-up & {
+            color: $clr-3;
+        }
+
+        .button-sort.sort-down & {
+            color: $clr-4;
+        }
+    }
+
+    &:after {
+        content: '\e903';
+        bottom: -5px;
+
+        .button-sort.sort-up & {
+            color: $clr-4;
+        }
+
+        .button-sort.sort-down & {
+            color: $clr-3;
+        }
+    }
+}

@@ -1,0 +1,101 @@
+.partners__inner {
+    overflow-y: hidden;
+    width: 100%;
+    padding: 0 0 15px;
+    height: 270px;
+    text-align: center;
+}
+
+.partners__list {
+    @include list-reset;
+
+    writing-mode: tb-rl;
+    transform: rotate(180deg);
+    color: $clr-white;
+    position: relative;
+    display: inline-block;
+    height: 100%;
+
+    &:before {
+        content: '';
+        position: absolute;
+        bottom: -2px;
+        left: 0;
+        width: 100%;
+        height: 25px;
+        background: linear-gradient(to top, 
+        rgba($clr-white,1) 0%,
+        rgba($clr-white,1) 5%,
+        rgba($clr-white,0) 100%);
+        z-index: 1;
+    }
+
+    &:after {
+        content: '';
+        position: absolute;
+        top: -2px;
+        left: 0;
+        width: 100%;
+        height: 25px;
+        background: linear-gradient(to bottom, 
+        rgba($clr-white,1) 0%,
+        rgba($clr-white,1) 5%,
+        rgba($clr-white,0) 100%);
+        z-index: 1;
+    }
+}
+
+.partners__item {
+    margin: 0 20px;
+    background: linear-gradient(to right, 
+    rgba($clr-1,0) 0%,
+    rgba($clr-1,1) 50%,
+    rgba($clr-1,1) 50%,
+    rgba($clr-1,0) 100%);
+    color: inherit;
+    font-size: 24px;
+    font-weight: bold;
+    transition: background 0.3s;
+    position: relative;
+    padding: 29px 25px 58px;
+    text-align: left;
+
+    @include media("<md") {
+        margin: 0 10px;
+    }
+
+    @include media("<sm") {
+        margin: 0;
+    }
+
+    &:hover {
+        background: linear-gradient(to right, 
+        rgba(lighten($clr-1, 10),0) 0%,
+        rgba(lighten($clr-1, 10),1) 50%,
+        rgba(lighten($clr-1, 10),1) 50%,
+        rgba(lighten($clr-1, 10),0) 100%);
+    }
+
+    &:first-of-type {
+        margin-right: 0;
+    }
+
+    &:last-of-type {
+        margin-left: 0;
+    }
+}
+
+.partners__item-value {
+    display: inline-block;
+    transform: rotate(90deg);
+    min-height: 60px;
+    text-align: center;
+    position: absolute;
+    bottom: 8px;
+    left: calc(50% - 15px);
+
+    /* IE only */
+    @media screen and (-ms-high-contrast: active), (-ms-high-contrast: none){
+        transform: rotate(90deg) translateY(-40px);
+    }
+}

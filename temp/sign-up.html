@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <title>CodeIT task</title>
+    <meta name="description" content="CodeIT FrontEnd test task">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./assets/css/main.css">
+  </head>
+  <body>
+    <div class="page">
+      <div class="page__wrapper">
+        <main class="page__main" role="main">
+          <div class="sign-up">
+            <div class="card">
+              <div class="card__header">
+                <h2 class="card__heading">Sign up</h2>
+              </div>
+              <div class="card__content">
+                <div class="card__spinner-overlay">
+                  <div class="card__spinner-wrapper">
+                    <div class="sk-cube-grid">
+                      <div class="sk-cube sk-cube1"></div>
+                      <div class="sk-cube sk-cube2"></div>
+                      <div class="sk-cube sk-cube3"></div>
+                      <div class="sk-cube sk-cube4"></div>
+                      <div class="sk-cube sk-cube5"></div>
+                      <div class="sk-cube sk-cube6"></div>
+                      <div class="sk-cube sk-cube7"></div>
+                      <div class="sk-cube sk-cube8"></div>
+                      <div class="sk-cube sk-cube9"></div>
+                    </div>
+                  </div>
+                </div>
+                <div class="card__error-overlay">
+                  <div class="card__error-message"></div>
+                </div>
+                <div class="sign-up__form-wrapper">
+                  <form class="custom-form">
+                    <div class="custom-form__row icon-user">
+                      <label class="custom-form__label" for="name">Name</label>
+                      <input class="custom-form__input" id="name" type="text" name="name" required>
+                    </div>
+                    <div class="custom-form__row icon-user">
+                      <label class="custom-form__label icon-user" for="secondname">Secondname </label>
+                      <input class="custom-form__input" id="secondname" type="text" name="secondname" required>
+                    </div>
+                    <div class="custom-form__row icon-envelop">
+                      <label class="custom-form__label" for="email">Email</label>
+                      <input class="custom-form__input" id="email" type="email" name="email" required>
+                    </div>
+                    <div class="custom-form__row custom-form__row--nolabel">
+                      <label class="custom-form__label" for="gender">Gender</label>
+                      <select class="custom-form__select" id="gender" name="gender" required>
+                        <option class="custom-form__option" value="male">Male</option>
+                        <option class="custom-form__option" value="female">Female</option>
+                      </select>
+                    </div>
+                    <div class="custom-form__row icon-key">
+                      <label class="custom-form__label" for="password">Password</label>
+                      <input class="custom-form__input" id="password" type="password" name="pass" required>
+                    </div>
+                    <div class="custom-form__row">
+                      <label class="custom-form__label custom-form__label--checkbox" for="agreement">Conditions of Agreement
+                        <input class="custom-form__input" id="agreement" type="checkbox" name="agreement" required><span class="custom-form__checkmark"></span>
+                      </label>
+                    </div>
+                    <div class="custom-form__row">
+                      <input class="custom-form__submit" type="submit" value="Send" name="submit">
+                    </div>
+                  </form>
+                </div>
+              </div>
+            </div>
+          </div>
+        </main>
+      </div>
+    </div>
+    <script src="./assets/js/app.js"></script>
+  </body>
+</html>
